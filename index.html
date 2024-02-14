@@ -6,9 +6,13 @@
     <title>Relógio Mundial</title>
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0" />
 </head>
-<body>
+<body id="body">
+    <h1 id="full">
+        <span class="material-symbols-outlined" onclick="fullscreen()">open_in_full</span>
+    </h1>
     <main>
         <p id="local">
             <span class="material-symbols-outlined">location_on</span> [error location]
@@ -30,6 +34,21 @@
             <h2>Tokyo-JAP</h2>
         </div>
     </section>
+    <section class="horarios">
+        <div class="local-mundo" id="Londres">
+            <img src="imgs/londres.jpg" alt="Londres">
+            <h2>Londres-ING</h2>
+        </div>
+        <div class="local-mundo" id="berlim">
+            <img src="imgs/berlim.jpg" alt="Berlim">
+            <h2>Berlim-ALE</h2>
+        </div>
+        <div class="local-mundo" id="buenos-aires">
+            <img src="imgs/buenos-aires.jpg" alt="Buenos Aires">
+            <h2>Buenos Aires-ARG</h2>
+        </div>
+    </section>
+
     <script src="script/script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgd2w_zox1E2djzYQdBJ_Ixs-a6eCyTxY&callback=initMap" async defer></script>
 </body>

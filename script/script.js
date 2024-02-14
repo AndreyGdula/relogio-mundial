@@ -106,3 +106,14 @@ setInterval(atualizaHora, 100)
 
 // Inicializa a hora com o horário atual
 atualizaHora()
+
+
+function fullscreen() {
+    var icon = document.querySelector('h1#full')
+    var section = document.getElementsByClassName('.local-mundo')
+    var body = document.querySelector('body#body')
+
+    icon.innerHTML = '<span class="material-symbols-outlined" onclick="fullscreen()">close_fullscreen</span>'
+    section.style.display = 'none'
+    body.style.background = 'black'
+}
