@@ -53,10 +53,11 @@ main:hover {
 }
 
 section {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 15px;
 }
 
 section div.local-mundo {
@@ -98,4 +99,8 @@ section div.local-mundo img:hover {
     opacity: 0.5;
     filter: blur(2px);
     cursor: pointer;
+}
+
+a {
+    display: inline-block;
 }
