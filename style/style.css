@@ -31,7 +31,7 @@ h1#full:hover {
 }
 
 main {
-    margin: 150px 0;
+    margin: 125px 0;
     text-align: center;
 
     & p#local {

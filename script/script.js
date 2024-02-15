@@ -109,11 +109,28 @@ atualizaHora()
 
 
 function fullscreen() {
-    var icon = document.querySelector('h1#full')
-    var section = document.getElementsByClassName('.local-mundo')
-    var body = document.querySelector('body#body')
-
-    icon.innerHTML = '<span class="material-symbols-outlined" onclick="fullscreen()">close_fullscreen</span>'
-    section.style.display = 'none'
-    body.style.background = 'black'
+    var body = document.getElementById("body")
+    if (!document.fullscreenElement) {
+        body.requestFullscreen().then(() => {
+            document.body.style.backgroundColor = "black";
+            var horariosSections = document.querySelectorAll(".horarios");
+            var localMargin = document.querySelector("p#local")
+            horariosSections.forEach(section => {
+                localMargin.style.margin = "200px 0px 0px 0px"
+                section.style.display = "none";
+            });
+        }).catch((err) => {
+            console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+    } else {
+        document.exitFullscreen().then(() => {
+            document.body.style.backgroundColor = "";
+            var horariosSections = document.querySelectorAll(".horarios");
+            horariosSections.forEach(section => {
+                section.style.display = "flex";
+            });
+        }).catch((err) => {
+            console.log(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
+        });
+    }
 }
