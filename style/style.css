@@ -60,7 +60,7 @@ section {
     gap: 15px;
 }
 
-section div.local-mundo {
+.local-mundo {
     width: 350px;
     height: 200px;
     border-radius: 20px;
@@ -74,14 +74,14 @@ section div.local-mundo {
     margin-bottom: 50px;
 }
 
-section div.local-mundo h2 {
+.local-mundo h2 {
     font-family: var(--font);
     color: var(--font-color);
     font-weight: 100;
     position: absolute;
 }
 
-section div.local-mundo:hover h2 {
+.local-mundo:hover h2 {
     transition: 1s;
     background-color: rgba(0, 0, 0, 0.150);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.100);
@@ -89,12 +89,12 @@ section div.local-mundo:hover h2 {
     cursor: pointer;
 }
 
-section div.local-mundo img {
+.local-mundo img {
     translate: 50px;
     opacity: 0.1;
 }
 
-section div.local-mundo img:hover {
+.local-mundo img:hover {
     transition: 1s;
     opacity: 0.5;
     filter: blur(2px);

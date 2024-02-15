@@ -24,8 +24,8 @@
         margin: auto;
     }
 
-    section div.local-mundo {
-        width: 325px;
+    .local-mundo {
+        width: 90% !important;
         height: 100px;
         margin: 15px auto;
     }
@@ -50,15 +50,14 @@
     section {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         place-items: center;
         margin: auto;
     }
 
-    section div.local-mundo {
-        width: 100%;
+    .local-mundo {
+        width: 90% !important;
         height: 200px;
-        margin: 15px;
+        margin: 15px auto;
     }
 }
 
@@ -87,7 +86,7 @@
     }
 
     .local-mundo {
-        width: 70% !important;
+        width: 80% !important;
         height: 200px;
         margin: 15px;
     }
