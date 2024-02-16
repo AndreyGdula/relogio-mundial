@@ -1,17 +1,24 @@
 function fullscreen() {
     var body = document.getElementById("body")
     var horariosSections = document.querySelectorAll(".horarios");
-    var localMargin = document.querySelector("main")
+    var main = document.querySelector("main")
     var icon = document.getElementById("fullscreen-icon");
+
     if (!document.fullscreenElement) {
         body.requestFullscreen().then(() => {
             document.body.style.backgroundColor = "black";
+            main.style.position = "absolute"
+            main.style.top = "50%"
+            main.style.left = "50%"
+            main.style.transform = 'translate(-50%, -60%)'
             horariosSections.forEach(section => {
-                localMargin.style.margin = "200px 0px 0px 0px"
                 section.style.display = "none";
                 icon.innerText = 'close_fullscreen'
                 if (window.innerWidth <= 768) {
                     body.style.rotate = "90deg"
+                    main.style.margin = "0px"
+                    icon.style.margin = "150px 0px"
+                    main.style.transform = 'translate(-50%, -25%)'
                 }
             });
         }).catch((err) => {
@@ -20,13 +27,14 @@ function fullscreen() {
     } else {
         document.exitFullscreen().then(() => {
             document.body.style.backgroundColor = "";
+            main.style.margin = "125px 0px"
+            main.style.position = ""
+            main.style.transform = ''
             horariosSections.forEach(section => {
-                localMargin.style.margin = ""
                 section.style.display = "grid";
                 icon.innerText = 'open_in_full'
-                if (window.innerWidth <= 768) {
-                    body.style.rotate = "0deg"
-                }
+                body.style.rotate = ""
+                icon.style.margin = ""
             });
         }).catch((err) => {
             console.log(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
