@@ -3,6 +3,7 @@ function fullscreen() {
     var horariosSections = document.querySelectorAll(".horarios");
     var main = document.querySelector("main")
     var icon = document.getElementById("fullscreen-icon");
+    var h1 = document.querySelector("h1#full")
 
     if (!document.fullscreenElement) {
         body.requestFullscreen().then(() => {
@@ -15,12 +16,15 @@ function fullscreen() {
                 section.style.display = "none";
                 icon.innerText = 'close_fullscreen'
                 if (window.innerWidth <= 768) {
-                    let marginHeight = window.innerHeight / 2 - 200
+                    let marginHeight = window.innerHeight / 2 - 180
+                    let marginWidth = window.innerHeight - innerWidth - 30
 
                     body.style.rotate = "90deg"
                     main.style.margin = "0px"
                     main.style.transform = 'translate(-50%, -25%)'
+                    h1.style.display = 'block'
                     icon.style.marginTop = marginHeight + 'px'
+                    icon.style.marginLeft = marginWidth + 'px'
                 }
             });
         }).catch((err) => {
@@ -31,7 +35,8 @@ function fullscreen() {
             document.body.style.backgroundColor = "";
             main.style.margin = "125px 0px"
             main.style.position = ""
-            main.style.transform = ''
+            main.style.transform = ""
+            h1.style.display = ""
             horariosSections.forEach(section => {
                 section.style.display = "grid";
                 icon.innerText = 'open_in_full'
