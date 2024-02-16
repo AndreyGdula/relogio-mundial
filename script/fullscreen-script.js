@@ -25,7 +25,7 @@ function fullscreen() {
                 section.style.display = "grid";
                 icon.innerText = 'open_in_full'
                 if (window.innerWidth <= 768) {
-                    body.style.rotate = "-90deg"
+                    body.style.rotate = "0deg"
                 }
             });
         }).catch((err) => {
