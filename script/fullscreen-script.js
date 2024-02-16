@@ -10,6 +10,9 @@ function fullscreen() {
                 localMargin.style.margin = "200px 0px 0px 0px"
                 section.style.display = "none";
                 icon.innerText = 'close_fullscreen'
+                if (window.innerWidth <= 768) {
+                    body.style.rotate = "90deg"
+                }
             });
         }).catch((err) => {
             console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
@@ -21,6 +24,9 @@ function fullscreen() {
                 localMargin.style.margin = ""
                 section.style.display = "grid";
                 icon.innerText = 'open_in_full'
+                if (window.innerWidth <= 768) {
+                    body.style.rotate = "-90deg"
+                }
             });
         }).catch((err) => {
             console.log(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
