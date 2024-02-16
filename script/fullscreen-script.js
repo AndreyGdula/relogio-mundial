@@ -16,12 +16,13 @@ function fullscreen() {
                 section.style.display = "none";
                 icon.innerText = 'close_fullscreen'
                 if (window.innerWidth <= 768) {
-                    let marginHeight = window.innerHeight / 2 - 180
-                    let marginWidth = window.innerHeight - innerWidth - 30
+                    let marginHeight = window.innerHeight - 80
+                    let marginWidth = window.innerWidth - 80
 
-                    body.style.rotate = "90deg"
+                    main.style.rotate = "90deg"
                     main.style.margin = "0px"
-                    main.style.transform = 'translate(-50%, -25%)'
+                    main.style.transform = 'translate(-60%, 65%)'
+
                     h1.style.display = 'block'
                     icon.style.marginTop = marginHeight + 'px'
                     icon.style.marginLeft = marginWidth + 'px'
@@ -40,7 +41,7 @@ function fullscreen() {
             horariosSections.forEach(section => {
                 section.style.display = "grid";
                 icon.innerText = 'open_in_full'
-                body.style.rotate = ""
+                main.style.rotate = ""
                 icon.style.margin = ""
             });
         }).catch((err) => {
