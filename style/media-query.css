@@ -18,9 +18,9 @@
     }
 
     section {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
         margin: auto;
     }
 
