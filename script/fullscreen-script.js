@@ -15,10 +15,12 @@ function fullscreen() {
                 section.style.display = "none";
                 icon.innerText = 'close_fullscreen'
                 if (window.innerWidth <= 768) {
+                    let marginHeight = window.innerHeight / 2 - 200
+
                     body.style.rotate = "90deg"
                     main.style.margin = "0px"
-                    icon.style.margin = "150px 0px"
                     main.style.transform = 'translate(-50%, -25%)'
+                    icon.style.marginTop = marginHeight + 'px'
                 }
             });
         }).catch((err) => {
