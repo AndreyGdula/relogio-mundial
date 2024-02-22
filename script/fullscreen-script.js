@@ -4,6 +4,7 @@ function fullscreen() {
     var main = document.querySelector("main")
     var icon = document.getElementById("fullscreen-icon");
     var h1 = document.querySelector("h1#full")
+    var p = document.querySelector("p#hora-atual")
 
     if (!document.fullscreenElement) {
         body.requestFullscreen().then(() => {
@@ -21,7 +22,9 @@ function fullscreen() {
 
                     main.style.rotate = "90deg"
                     main.style.margin = "0px"
-                    main.style.transform = 'translate(-60%, 65%)'
+                    main.style.transform = 'translate(-51%, 75%)'
+                    p.style.fontFamily = "Chivo Mono"
+                    p.style.fontWeight = "100"
 
                     h1.style.display = 'block'
                     icon.style.marginTop = marginHeight + 'px'
@@ -37,6 +40,8 @@ function fullscreen() {
             main.style.margin = "125px 0px"
             main.style.position = ""
             main.style.transform = ""
+            p.style.fontFamily = ""
+            p.style.fontWeight = ""
             h1.style.display = ""
             horariosSections.forEach(section => {
                 section.style.display = "grid";
